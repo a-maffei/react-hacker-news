@@ -1,8 +1,11 @@
 import React from "react";
 import Searchbar from "./Searchbar";
 import "./header.css";
+import {useState, useEffect} from 'react';
+import axios from "axios";
 
-export default function Header() {
+export default function Header(props) {
+  
   return (
     <div id="header-container">
       <div id="header-logo">
@@ -14,7 +17,12 @@ export default function Header() {
         <li>ve</li>
         <li>dola</li>
       </ul>
-      <Searchbar />
+      <div>
+      <input type="text"
+       value={props.userInput}
+       onChange = {(e) => props.setUserInput(e.target.value)  }
+      placeholder="Search.."></input>
+    </div>
     </div>
   );
 }
