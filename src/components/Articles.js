@@ -20,7 +20,7 @@ export default function Articles(props) {
         {article.title}
       </h2>
       <p>
-        {article.points} points by {article.author} | {article.created_at} |
+        {article.points} points by {article.author} on {article.created_at} |
         hide | {article.num_comments} comments
       </p>
     </div>
