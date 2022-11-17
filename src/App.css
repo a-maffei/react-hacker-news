@@ -1,3 +1,7 @@
 body {
   background-color: #f6f6ef;
 }
+
+#spinner {
+  margin-top: 50px;
+}
