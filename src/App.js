@@ -18,7 +18,7 @@ function App() {
     const timer = setTimeout(() => axios.get(url).then((response) => {
       setArticles(response.data.hits);
       setLoading(false);
-      console.log(response.data.hits)}), 3000);
+      console.log(response.data.hits)}), 2000);
       return () => clearTimeout(timer)}
 
     useEffect(() => fetchData(), [userInput]);

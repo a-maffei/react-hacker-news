@@ -1,3 +1,5 @@
+import {useState, useEffect} from 'react';
+
 export default function Articles(props) {
   const formattedDate = props.articles.map(
     (article) =>
@@ -11,7 +13,12 @@ export default function Articles(props) {
       ))
   );
 
-  return props.articles.map((article) => (
+
+  
+  return props.articles.length===0 ? (
+    <div>No articles found</div>
+    ) : (
+    props.articles.map((article) => (
     <div id="articles">
       <h2
         style={{ cursor: "pointer", display: "inline-block" }}
@@ -24,5 +31,6 @@ export default function Articles(props) {
         hide | {article.num_comments} comments
       </p>
     </div>
-  ));
+  ))
+  )
 }
