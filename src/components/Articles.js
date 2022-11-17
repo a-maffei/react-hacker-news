@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from "react";
 
 export default function Articles(props) {
   const formattedDate = props.articles.map(
@@ -13,24 +13,22 @@ export default function Articles(props) {
       ))
   );
 
-
-  
-  return props.articles.length===0 ? (
+  return props.articles.length === 0 ? (
     <div>No articles found</div>
-    ) : (
+  ) : (
     props.articles.map((article) => (
-    <div id="articles">
-      <h2
-        style={{ cursor: "pointer", display: "inline-block" }}
-        onClick={() => window.open(article.url, "_blank")}
-      >
-        {article.title}
-      </h2>
-      <p>
-        {article.points} points by {article.author} on {article.created_at} |
-        hide | {article.num_comments} comments
-      </p>
-    </div>
-  ))
-  )
+      <div id="articles" key={article.objectID}>
+        <h2
+          style={{ cursor: "pointer", display: "inline-block" }}
+          onClick={() => window.open(article.url, "_blank")}
+        >
+          {article.title}
+        </h2>
+        <p>
+          {article.points} points by {article.author} on {article.created_at} |
+          hide | {article.num_comments} comments
+        </p>
+      </div>
+    ))
+  );
 }
