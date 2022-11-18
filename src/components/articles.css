@@ -1,0 +1,75 @@
+#notfound {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.84rem;
+    font-weight: normal;
+}
+
+#articles {
+    margin-left: 2px;
+    margin-bottom: 5px;
+}
+
+#articles-number {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.84rem;
+    font-weight: normal;
+    color: gray;
+    font-size: 0.815rem;
+    margin: 0px;
+    width: 20px;
+    text-align: right;
+}
+
+#articles-title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 3px;
+}
+
+#articles-title img {
+    width: 8px;
+    height: 8px;
+}
+
+
+#articles h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.815rem;
+    font-weight: normal;
+    margin: 0px;
+}
+
+#articles h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.65rem;
+    font-weight: normal;
+    margin: 0px;
+    color: gray;
+}
+
+#articles-stats {
+    margin-left: 34px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: flex;
+    gap: 3px;
+}
+
+#articles-stats p {
+    font-size: 0.6rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gray;
+    margin-top: 3px;
+    margin-bottom: 0px;
+}
+
+#hide:hover {
+ text-decoration: underline;
+}
+
+#notfound img {
+    width: 400px;
+    margin-top: 10px;
+}
