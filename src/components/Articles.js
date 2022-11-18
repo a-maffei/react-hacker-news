@@ -17,7 +17,7 @@ export default function Articles(props) {
         }
       ))
   );
-  
+
   function isValidHttpUrl(string) {
     try {
       return Boolean(new URL(string));
@@ -42,7 +42,7 @@ export default function Articles(props) {
     </div>
     ) : (
     props.articles.map((article) => (
-    <div id="articles">
+    <div id="articles" key={article.objectID}>
       <div id="articles-title">
       <p id="articles-number">{props.articles.indexOf(article)+1}.</p>
       <img src={up}></img>
