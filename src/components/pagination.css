@@ -1,0 +1,15 @@
+ul  {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.81rem;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 0;
+ 
+}
+
+.pagination-link {
+    text-decoration: none;
+    color: black;
+}

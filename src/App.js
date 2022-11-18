@@ -11,7 +11,7 @@ function App() {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [articlesPerPage] = useState(10);
+  const [articlesPerPage] = useState(30);
   const [error, setError] = useState(null);
 
   const url = `http://hn.algolia.com/api/v1/search?query=${userInput}&tags=story&hitsPerPage=100`;
