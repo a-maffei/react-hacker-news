@@ -11,7 +11,7 @@ function App() {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(false);
  
-  const url = `http://hn.algolia.com/api/v1/search?query=${userInput}&tags=story`
+  const url = `http://hn.algolia.com/api/v1/search?query=${userInput}&tags=story&hitsPerPage=30`
   
   const fetchData = () => {
     setLoading(true);
