@@ -29,12 +29,19 @@ export default function Articles(props) {
  const articleUrl = props.articles.map(
     (article) => {
     if (isValidHttpUrl(article.url) === true) {
-      article.url = new URL(article.url).hostname
+      article.domain = new URL(article.url).hostname
     } else {
       return "no link";
-      delete article.url;
+      // delete article.url;
     } }
   );
+  
+  const [articles, setArticles] = useState("");
+
+  function hideArticle(title) {
+    const newArticles = props.articles.filter(article => article.title !== title)
+    setArticles(newArticles);
+  }
 
   return props.articles.length===0 ? (
     <div id="notfound">No articles found. Enjoy this picture of a cute dog instead!
@@ -52,13 +59,14 @@ export default function Articles(props) {
       >
         {article.title}
       </h2>
-      <h3>{article.url}</h3>
+      <h3>{article.domain}</h3>
       </div>
       <div id="articles-stats">
       <p>{article.points} points by {article.author} on {article.created_at} |</p>
       <p
         id="hide"
         style={{ cursor: "pointer", display: "inline-block" }}
+        onClick={() => hideArticle(article.title)}
         > hide </p>
       <p>| {article.num_comments} comments</p>
       </div>
