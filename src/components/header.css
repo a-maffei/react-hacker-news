@@ -1,35 +1,61 @@
 #header-container {
   background-color: #ff6600;
   display: flex;
-  gap: 20px;
   align-items: center;
+  justify-content: space-between;
+  height: 24px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#header-main {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 #header-logo {
   border: 1px solid white;
-  width: 30px;
-  height: 30px;
+  width: 18px;
+  height: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 2px;
 }
 
 #header-logo p {
   color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.84rem;
 }
 
 #header-title {
-  font-size: 1.2em;
+  font-size: 0.84rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: -0.005em;
 }
 
 #header-links {
   display: flex;
   gap: 10px;
   justify-content: flex-start;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
+
 }
 
 #header-links li {
   list-style: none;
   border-right: 1px solid black;
   padding-right: 10px;
+}
+
+#header-search {
+  margin-right: 3px;
+}
+
+#header-search input {
+  height: 0.75rem;
+  width: 200px;
 }
