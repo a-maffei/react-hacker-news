@@ -12,7 +12,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [articlesPerPage] = useState(30);
-  const [error, setError] = useState(null);
+  const [errorMsg, setErrorMsg] = useState(null);
 
   const url = `http://hn.algolia.com/api/v1/search?query=${userInput}&tags=story&hitsPerPage=100`;
 
@@ -20,11 +20,17 @@ function App() {
     setLoading(true);
     const timer = setTimeout(
       () =>
-        axios.get(url).then((response) => {
-          setArticles(response.data.hits);
-          setLoading(false);
-          console.log(response);
-        }),
+        axios
+          .get(url)
+          .then((response) => {
+            setArticles(response.data.hits);
+            setLoading(false);
+            console.log(response);
+          })
+          .catch((err) => {
+            setErrorMsg(err.message);
+            console.log(errorMsg);
+          }),
       2000
     );
     return () => clearTimeout(timer);
